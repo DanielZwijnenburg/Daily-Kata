@@ -16,9 +16,7 @@ class StringCalculator
   def add(numberString)
     return 0 if numberString.empty?
 
-    delimiter = find_delimiter(numberString)
-
-    numberArray = numberStringToArray(numberString, delimiter)
+    numberArray = numberStringToArray(numberString)
 
     numberArray = numberArray.reject{|n| n >= 1000}
 
@@ -29,13 +27,14 @@ class StringCalculator
 
   private
 
-  def find_delimiter(numberString)
-    numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
-  end
-
-  def numberStringToArray(numberString, delimiter)
+  def numberStringToArray(numberString)
+    delimiter = find_delimiter(numberString)
     numberString.gsub!("\n", delimiter)
     numberString.split(delimiter).map(&:to_i)
+  end
+
+  def find_delimiter(numberString)
+    numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
   end
 
   def raise_error_if_negatives(numberArray)
