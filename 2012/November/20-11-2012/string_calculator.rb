@@ -20,8 +20,13 @@ class StringCalculator
 
     numberString.gsub!("\n", delimiter)
 
+    numberString = numberString.split(delimiter).map(&:to_i)
 
-    numberString.split(delimiter).map(&:to_i).inject(&:+)
+    negatives = numberString.find_all{|n| n < 0}
+
+    raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if negatives.any?
+
+    numberString.inject(&:+)
   end
 end
 
