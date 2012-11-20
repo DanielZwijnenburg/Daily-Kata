@@ -12,6 +12,10 @@
 #   tests you did not think about
 # - Remember to refactor after EACH passing test
 
+class StringCalculator
+
+end
+
 # Step 2
 #
 # Allow the add method to handle an unknown amount of numbers
@@ -30,3 +34,4 @@
 #   line that looks like this: "//[delimiter]\n[numbers]" for example "//;\n1;2" 
 #   should return 3 where the default delimiter is ';'
 # - the first line is optional. all existing scenarios should still be supported.
+
