@@ -37,4 +37,11 @@ describe 'StringCalculator' do
       expect {calc.add("1,2,3,-100")}.to raise_error(ArgumentError) 
     end
   end
+
+  describe "#add with numbers bigger than 1000 should be ignored" do
+    it "Ignores 1000 and returns 1 given 1000, 1" do
+      calc.add("1000,1").should == 1 
+    end
+  end
+
 end

@@ -34,7 +34,7 @@ end
 #
 # Allow the add method to handle an unknown amount of numbers
 #
-# implementation
+# Implementation
 #
 # numberString.split(",").map(&:to_i).inject(&:+)
 
@@ -56,7 +56,7 @@ end
 #   should return 3 where the default delimiter is ';'
 # - the first line is optional. all existing scenarios should still be supported.
 #
-# implementation
+# Implementation
 #
 # numberString.slice(2, numberString.index("\n") -2)
 
@@ -65,3 +65,13 @@ end
 # Call add with a negative number will raise an exception "negatives not allowed" - 
 # and the negative that was passed. If there are multiple negatives, show all of them 
 # in the exception message.
+#
+# Implementation
+# 
+# negatives = numberString.find_all{|n| n < 0}
+#
+# raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if negatives.any?
+
+# Step 6
+#
+# Numbers bigger than 1000 should be ignored, so adding "2,1001" == 2
