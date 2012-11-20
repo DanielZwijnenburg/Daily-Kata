@@ -16,7 +16,7 @@ class StringCalculator
   def add(numberString)
     return 0 if numberString.empty?
 
-    delimiter = numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
+    delimiter = find_delimiter(numberString)
 
     numberString.gsub!("\n", delimiter)
 
@@ -27,6 +27,10 @@ class StringCalculator
     raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if negatives.any?
 
     numberString.inject(&:+)
+  end
+
+  def find_delimiter(numberString)
+    numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
   end
 end
 
