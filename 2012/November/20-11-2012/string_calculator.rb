@@ -35,7 +35,10 @@ end
 # Allow the add method to handle new lines between numbers (instead of commas)
 # - The following input is ok: "1\n2,3" (will equal 6)
 # - The following input is NOT ok: "1,\n" (don't worry about proving it, no need to check for this)
-
+#
+# Implementation
+#
+# numberString.gsub!("\n", ",")
 
 # Step 4
 #

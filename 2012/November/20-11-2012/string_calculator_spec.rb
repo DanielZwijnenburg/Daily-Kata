@@ -18,9 +18,17 @@ describe 'StringCalculator' do
     it 'returns 44' do
       calc.add("20, 10, 5, 5, 4").should == 44
     end
+	end
 
+  describe "#add with \n delimiter mixed in" do
     it 'returns 6 given "1\n2,3"' do
       calc.add("1\n2,3").should == 6
     end
-	end
+  end
+
+  describe "#add with custom delimiter" do
+    it 'returns 6 given "//;\n1;2;3"' do
+      calc.add("//;\n1;2;3").should == 6
+    end
+  end
 end
