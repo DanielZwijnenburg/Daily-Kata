@@ -31,4 +31,10 @@ describe 'StringCalculator' do
       calc.add("//;\n1;2;3").should == 6
     end
   end
+
+  describe "#add with negative number will raise exception" do
+    it "raises Negatives Not allowed" do
+      expect {calc.add("1,2,3,-100")}.to raise_error(ArgumentError) 
+    end
+  end
 end

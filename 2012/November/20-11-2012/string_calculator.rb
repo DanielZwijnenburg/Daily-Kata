@@ -16,9 +16,10 @@ class StringCalculator
   def add(numberString)
     return 0 if numberString.empty?
 
-    delimiter =  numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
+    delimiter = numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
 
     numberString.gsub!("\n", delimiter)
+
 
     numberString.split(delimiter).map(&:to_i).inject(&:+)
   end
@@ -49,4 +50,13 @@ end
 #   line that looks like this: "//[delimiter]\n[numbers]" for example "//;\n1;2" 
 #   should return 3 where the default delimiter is ';'
 # - the first line is optional. all existing scenarios should still be supported.
+#
+# implementation
+#
+# numberString.slice(2, numberString.index("\n") -2)
 
+# Step 5
+#
+# Call add with a negative number will raise an exception "negatives not allowed" - 
+# and the negative that was passed. If there are multiple negatives, show all of them 
+# in the exception message.
