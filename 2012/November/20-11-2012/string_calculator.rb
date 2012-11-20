@@ -13,7 +13,8 @@
 # - Remember to refactor after EACH passing test
 
 class StringCalculator
-
+  def add(numberString)
+  end
 end
 
 # Step 2
