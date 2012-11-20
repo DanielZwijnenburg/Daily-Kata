@@ -20,7 +20,7 @@ class StringCalculator
 
     numberString.gsub!("\n", delimiter)
 
-    numberString = numberString.split(delimiter).map(&:to_i)
+    numberString = numberString.split(delimiter).map(&:to_i).reject{|n| n >= 1000}
 
     negatives = numberString.find_all{|n| n < 0}
 
