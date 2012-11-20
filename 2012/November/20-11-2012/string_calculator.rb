@@ -91,3 +91,16 @@ end
 # Step 6
 #
 # Numbers bigger than 1000 should be ignored, so adding "2,1001" == 2
+#
+# Implementation
+#
+# numberArray.reject{|n| n >= 1000}
+
+# Step 7
+#
+# Delimiters can be of any length with the following format: "//[delimiter]\n" for 
+# example: "//[***]\n1***2***3" should return 6
+#
+# Implementation
+#
+# numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","

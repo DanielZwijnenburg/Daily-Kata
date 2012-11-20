@@ -30,6 +30,10 @@ describe 'StringCalculator' do
     it 'returns 6 given "//;\n1;2;3"' do
       calc.add("//;\n1;2;3").should == 6
     end
+
+    it 'returns 55 given "//:):)\n25:):)10:):)20"' do
+      calc.add("//;\n1;2;3").should == 6
+    end
   end
 
   describe "#add with negative number will raise exception" do
