@@ -18,9 +18,9 @@ class StringCalculator
 
     delimiter = find_delimiter(numberString)
 
-    numberString.gsub!("\n", delimiter)
+    numberArray = numberStringToArray(numberString, delimiter)
 
-    numberString = numberString.split(delimiter).map(&:to_i).reject{|n| n >= 1000}
+    numberString = numberArray.reject{|n| n >= 1000}
 
     negatives = numberString.find_all{|n| n < 0}
 
@@ -31,6 +31,11 @@ class StringCalculator
 
   def find_delimiter(numberString)
     numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
+  end
+
+  def numberStringToArray(numberString, delimiter)
+    numberString.gsub!("\n", delimiter)
+    numberString.split(delimiter).map(&:to_i)
   end
 end
 
