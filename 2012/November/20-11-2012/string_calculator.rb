@@ -20,14 +20,14 @@ class StringCalculator
 
     numberArray = numberStringToArray(numberString, delimiter)
 
-    numberString = numberArray.reject{|n| n >= 1000}
+    numberArray = numberArray.reject{|n| n >= 1000}
 
-    negatives = numberString.find_all{|n| n < 0}
+    raise_error_if_negatives(numberArray)
 
-    raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if negatives.any?
-
-    numberString.inject(&:+)
+    numberArray.inject(&:+)
   end
+
+  private
 
   def find_delimiter(numberString)
     numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
@@ -37,6 +37,13 @@ class StringCalculator
     numberString.gsub!("\n", delimiter)
     numberString.split(delimiter).map(&:to_i)
   end
+
+  def raise_error_if_negatives(numberArray)
+    negatives = numberArray.find_all{|n| n < 0}
+
+    raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if negatives.any?
+  end
+
 end
 
 # Step 2
