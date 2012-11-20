@@ -16,9 +16,11 @@ class StringCalculator
   def add(numberString)
     return 0 if numberString.empty?
 
-    numberString.gsub!("\n", ",")
+    delimiter =  numberString.include?("//") ? numberString.slice(2, numberString.index("\n") -2) : ","
 
-    numberString.split(",").map(&:to_i).inject(&:+)
+    numberString.gsub!("\n", delimiter)
+
+    numberString.split(delimiter).map(&:to_i).inject(&:+)
   end
 end
 
