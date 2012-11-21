@@ -30,7 +30,6 @@
 class Game
 
   def initialize()
-    @score = 0
     @rolls = Array.new
     @current_roll = 0
   end
@@ -41,11 +40,13 @@ class Game
   end
 
   def score
+    score = 0
+
     @rolls.each do |roll|
-      @score += roll
+      score += roll
     end
 
-    return @score
+    return score
   end
 
 end
