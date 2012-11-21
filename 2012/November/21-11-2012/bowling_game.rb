@@ -29,16 +29,10 @@
 #           It returns the total score for that game.
 class Game
 
+  attr_accessor :score
+
   def initialize()
     @score = 0
-  end
-
-  def score=(score)
-    @score = score
-  end
-
-  def score
-    @score
   end
 
   def roll(pins)
