@@ -27,3 +27,6 @@
 #
 # score() : int is called only at the very end of the game.  
 #           It returns the total score for that game.
+class Game
+
+end
