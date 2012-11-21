@@ -43,7 +43,7 @@ class Game
     score = 0
 
     @rolls.each_slice(2).with_index do |(roll1, roll2), i|
-      if roll1 + roll2 == 10
+      if spare?(roll1, roll2)
         score += 10 + @rolls[i+2]
       else
         score += roll1 + roll2
@@ -51,6 +51,12 @@ class Game
     end
 
     return score
+  end
+
+  private
+
+  def spare?(roll1, roll2)
+    roll1 + roll2 == 10
   end
 
 end

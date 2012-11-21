@@ -11,6 +11,11 @@ describe 'BownlingGame' do
     end
   end
 
+  def throw_spare
+    @game.roll(5)
+    @game.roll(5)
+  end
+
   it 'should be a gutter game' do
     roll_many(0, 20)
     @game.score.should == 0
@@ -22,8 +27,7 @@ describe 'BownlingGame' do
   end
 
   it 'should throw one spare' do
-    @game.roll(5)
-    @game.roll(5) #this is the spare
+    throw_spare
     @game.roll(3)
     roll_many(0, 17)
 
