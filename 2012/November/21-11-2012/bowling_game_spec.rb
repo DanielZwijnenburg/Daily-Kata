@@ -1,22 +1,24 @@
 require_relative 'bowling_game'
 
 describe 'BownlingGame' do
-  describe 'Gutter game' do
-    game = Game.new
-    1.upto(20).each do |roll|
-      game.roll(0)
-    end
-
-    game.score.should == 0
+  before(:each) do
+    @game = Game.new
   end
 
-  describe 'Roll one pin per throw' do
-    game = Game.new
-    1.upto(20).each do |roll|
-      game.roll(1)
+  def roll_many(pins, times)
+    times.times do
+      @game.roll(pins)
     end
+  end
 
-    game.score.should == 20
+  it 'should be a gutter game' do
+    roll_many(0, 20)
+    @game.score.should == 0
+  end
+
+  it 'should be only ones' do
+    roll_many(1, 20)
+    @game.score.should == 20
   end
 
 end
