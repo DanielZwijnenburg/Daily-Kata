@@ -29,8 +29,6 @@
 #           It returns the total score for that game.
 class Game
 
-  attr_accessor :score
-
   def initialize()
     @score = 0
     @rolls = Array.new
@@ -38,9 +36,16 @@ class Game
   end
 
   def roll(pins)
-    @score += pins
     @rolls[@current_roll] = pins
     @current_roll += 1
+  end
+
+  def score
+    @rolls.each do |roll|
+      @score += roll
+    end
+
+    return @score
   end
 
 end
