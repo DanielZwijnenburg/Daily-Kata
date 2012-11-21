@@ -29,12 +29,20 @@
 #           It returns the total score for that game.
 class Game
 
+  def initialize()
+    @score = 0
+  end
+
+  def score=(score)
+    @score = score
+  end
+
   def score
-    0
+    @score
   end
 
   def roll(pins)
-
+    @score += pins
   end
 
 end
