@@ -26,12 +26,11 @@ describe 'BownlingGame' do
     @game.score.should == 20
   end
 
-  it 'should throw one spare' do
+  it 'should throw one spare with according points' do
     throw_spare
     @game.roll(3)
     roll_many(0, 17)
 
     @game.score.should == 16
   end
-
 end
