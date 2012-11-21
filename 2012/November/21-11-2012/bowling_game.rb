@@ -29,4 +29,8 @@
 #           It returns the total score for that game.
 class Game
 
+  def roll(pins)
+    
+  end
+
 end
