@@ -33,10 +33,14 @@ class Game
 
   def initialize()
     @score = 0
+    @rolls = Array.new
+    @current_roll = 0
   end
 
   def roll(pins)
     @score += pins
+    @rolls[@current_roll] = pins
+    @current_roll += 1
   end
 
 end
