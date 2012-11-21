@@ -42,9 +42,12 @@ class Game
   def score
     score = 0
 
-    10.times.each_with_index do |i|
-      score += @rolls[i] + @rolls[i+1]
-      i += 2
+    @rolls.each_slice(2).with_index do |(roll1, roll2), i|
+      if roll1 + roll2 == 10
+        score += 10 + @rolls[i+2]
+      else
+        score += roll1 + roll2
+      end
     end
 
     return score
