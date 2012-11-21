@@ -6,5 +6,7 @@ describe 'BownlingGame' do
     1.upto(10).each do |roll|
       game.roll(0)
     end
+
+    game.score.should == 0
   end
 end
