@@ -133,7 +133,16 @@
 #       | |  
 #          - 
 #     """
-
+# Scenario: 345
+#   When I convert the number "345" to LCD
+#   Then I should get the following representation
+#   """
+#    -       - 
+#     | | | |  
+#    -   -   - 
+#     |   |   |
+#    -       - 
+#   """#
 class Lcd
 
   @@numbers = [
@@ -190,18 +199,21 @@ class Lcd
               ]
 
   def self.convert(number)
-    result = []
-    (0..4).each do |lineNr|
-      digits = number.to_s.chars.map { |digit| digit.to_i }
-      line = []
+    result = 5.times.inject([]) do |array, rowNumber|
+      digits = self.get_digits(number)
+      line   = self.build_digit_lines(digits, rowNumber)
+      array << line.join(" ")
+    end.join("")
+  end
 
-      digits.each do |digit|
-        line << @@numbers[digit][lineNr]
-      end
-      
-      result << line.join(" ")
-    end
-    result.join("")
+  private
+
+  def self.get_digits(number)
+    number.to_s.chars.inject([]) { |array, digit| array << digit.to_i }
+  end
+
+  def self.build_digit_lines(digits, rowNumber)
+    digits.inject([]) { |array, digit| array << @@numbers[digit][rowNumber] }
   end
 
 end
