@@ -120,11 +120,20 @@
 class Lcd
 
   def self.convert(number)
-    return  "   " +
-            "  |" +
-            "   " +
-            "  |" +
-            "   "
+    case number
+      when 1
+        "   " +
+        "  |" +
+        "   " +
+        "  |" +
+        "   "
+      when 2
+        " - " +
+        "  |" +
+        " - " +
+        "|  " +
+        " - "
+    end
   end
 
 end
