@@ -86,7 +86,7 @@ describe 'Lcd Kata' do
 
   describe "Multiple digits" do
     it "#convert should return the LCD representation of 12" do
-      Lcd.convert(12).should ==  "     - " +
+      Lcd.convert(12).should == "     - " +
                                 "  |   |" +
                                 "     - " +
                                 "  | |  " +
