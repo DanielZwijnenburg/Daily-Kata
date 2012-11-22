@@ -73,4 +73,12 @@ describe 'Lcd Kata' do
                               " - "
   end
 
+  it "#convert should return the LCD representation of 0" do
+    Lcd.convert(0).should ==  " - " +
+                              "| |" +
+                              "   " +
+                              "| |" +
+                              " - "
+  end
+
 end
