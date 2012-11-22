@@ -117,3 +117,14 @@
 #    | |
 #     - 
 #    """
+class Lcd
+
+  def self.convert(number)
+    return  "   " +
+            "  |" +
+            "   " +
+            "  |" +
+            "   "
+  end
+
+end
