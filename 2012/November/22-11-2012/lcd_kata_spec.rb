@@ -9,7 +9,7 @@ describe 'Lcd Kata' do
                               "   "
   end
 
-  it "#convert  should return the LCD representation of 2" do
+  it "#convert should return the LCD representation of 2" do
     Lcd.convert(2).should ==  " - " +
                               "  |" +
                               " - " +
@@ -17,7 +17,7 @@ describe 'Lcd Kata' do
                               " - "
   end
 
-  it "#convert  should return the LCD representation of 3" do
+  it "#convert should return the LCD representation of 3" do
     Lcd.convert(3).should ==  " - " +
                               "  |" +
                               " - " +
@@ -25,12 +25,20 @@ describe 'Lcd Kata' do
                               " - "
   end
 
-  it "#convert  should return the LCD representation of 4" do
+  it "#convert should return the LCD representation of 4" do
     Lcd.convert(4).should ==  "   " +
                               "| |" +
                               " - " +
                               "  |" +
                               "   "
+  end
+
+  it "#convert should return the LCD representation of 5" do
+    Lcd.convert(5).should ==  " - " +
+                              "|  " +
+                              " - " +
+                              "  |" +
+                              " - "
   end
 
 end
