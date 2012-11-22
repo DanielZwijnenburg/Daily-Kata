@@ -16,4 +16,13 @@ describe 'Lcd Kata' do
                               "|  " +
                               " - "
   end
+
+  it "#convert  should return the LCD representation of 3" do
+    Lcd.convert(3).should ==  " - " +
+                              "  |" +
+                              " - " +
+                              "  |" +
+                              " - "
+  end
+
 end
