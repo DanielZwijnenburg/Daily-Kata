@@ -117,6 +117,23 @@
 #    | |
 #     - 
 #    """
+
+# Step 2
+# Support multiple digits with a column of spaces in-between
+# 
+# Feature: Generating LCD representation for multi-digit numbers
+# 
+#   Scenario: 12
+#     When I convert the number "12" to LCD
+#     Then I should get the following representation
+#     """
+#          - 
+#       |   |
+#          - 
+#       | |  
+#          - 
+#     """
+
 class Lcd
 
   def self.convert(number)
@@ -185,3 +202,4 @@ class Lcd
   end
 
 end
+
