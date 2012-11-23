@@ -25,5 +25,7 @@ describe("StringCalculator", function() {
     expect(stringCalculator.add("1\n2,2,10")).toEqual(15);
   });
   
-
+  it("should support a different delimiter '//;\n1,2'", function() {
+    expect(stringCalculator.add("//;\n1,2")).toEqual(3);
+  });
 })
