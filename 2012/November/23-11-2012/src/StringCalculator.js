@@ -6,15 +6,24 @@ StringCalculator.prototype.add = function(numberString){
     return 0;
   }
 
-  numberString = numberString.replace("\n", ",");
-
   var result = 0;
   var numbers = new Array();
+  var delimiter = ",";
 
-  numbers = numberString.split(",");
-  
+  if(numberString.indexOf("//") !== -1){
+    delimiter = numberString.slice(2, numberString.indexOf("\n"));
+  }
+
+  numberString = numberString.replace("\n", delimiter);
+
+  numbers = numberString.split(delimiter);
+ 
   for(num in numbers){
-    result += parseInt(numbers[num]);
+    var currentNumber = parseInt(numbers[num]);
+
+    if(typeof currentNumber === "number" && !isNaN(currentNumber)){
+      result += parseInt(numbers[num]);
+    }
   }
   return result;
 }
