@@ -16,4 +16,8 @@ describe("StringCalculator", function() {
   it("should return 3 given '1,2'", function() {
     expect(stringCalculator.add("1,2")).toEqual(3);
   });
+
+  it("should return 25 given '1,2,2,10,10'", function() {
+    expect(stringCalculator.add("1,2,2,10,10")).toEqual(25);
+  });
 })
