@@ -2,5 +2,8 @@ function StringCalculator(){
 }
 
 StringCalculator.prototype.add = function(numberString){
-  return 0;
+  if(numberString == ""){
+    return 0;
+  }
+  return parseInt(numberString);
 }
