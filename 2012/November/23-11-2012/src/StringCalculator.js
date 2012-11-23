@@ -6,6 +6,8 @@ StringCalculator.prototype.add = function(numberString){
     return 0;
   }
 
+  numberString = numberString.replace("\n", ",");
+
   var result = 0;
   var numbers = new Array();
 
