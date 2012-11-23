@@ -20,4 +20,10 @@ describe("StringCalculator", function() {
   it("should return 25 given '1,2,2,10,10'", function() {
     expect(stringCalculator.add("1,2,2,10,10")).toEqual(25);
   });
+
+  it("should return 25 given '1\n2,2,10'", function() {
+    expect(stringCalculator.add("1\n2,2,10")).toEqual(15);
+  });
+  
+
 })
