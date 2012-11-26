@@ -36,4 +36,8 @@ describe("FizzBuzz", function() {
     expect(fizzBuzz.calculate(5)).toEqual("buzz");
   })
 
+  it("should return fizzbuzz given 15 via common interface", function(){
+    expect(fizzBuzz.calculate(15)).toEqual("fizzbuzz");
+  })
+
 })
