@@ -1,19 +1,25 @@
 function FizzBuzz(){
+  this.calculate = function(number){
+    if(dividablebyThree(number) && dividablebyFive(number)){
+      return 'fizzbuzz';
+    }
+    if(dividablebyThree(number)){
+      return 'fizz';
+    }
+    if(dividablebyFive(number)){
+      return 'buzz';
+    }
 
-}
-
-FizzBuzz.prototype.calculate = function(number) {
-  if(number % 3 == 0 && number % 5 == 0){
-    return 'fizzbuzz';
-  }
-  if(number % 3 == 0){
-    return 'fizz';
-  }
-  if(number % 5 == 0){
-    return 'buzz';
+    return number.toString();
   }
 
-  return number.toString();
+  function dividablebyThree(number){
+    return number % 3 == 0;
+  }
+
+  function dividablebyFive(number){
+    return number % 5 == 0;
+  }
 }
 
 FizzBuzz.prototype.calculateFizz = function(number) {
