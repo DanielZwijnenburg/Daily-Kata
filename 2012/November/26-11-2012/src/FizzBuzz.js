@@ -14,5 +14,7 @@ FizzBuzz.prototype.calculateBuzz = function(number){
 }
 
 FizzBuzz.prototype.calculateFizzBuzz = function(number){
-  return 'fizzbuzz';
+  if(number % 15 == 0){
+    return 'fizzbuzz';
+  }
 }
