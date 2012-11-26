@@ -14,10 +14,14 @@ function FizzBuzz(){
   }
 
   function dividablebyThree(number){
-    return number % 3 == 0 && number != 0;
+    return number % 3 == 0 && isNotZero(number);
   }
 
   function dividablebyFive(number){
-    return number % 5 == 0 && number != 0;
+    return number % 5 == 0 && isNotZero(number);
+  }
+
+  function isNotZero(number){
+    return number != 0;
   }
 }
