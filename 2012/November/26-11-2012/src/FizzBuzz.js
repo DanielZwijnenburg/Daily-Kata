@@ -14,6 +14,10 @@ FizzBuzz.prototype.calculateFizz = function(number) {
   }
 }
 
+FizzBuzz.prototype.isdividableByThree = function(number) {
+  return number % 3 == 0
+}
+
 FizzBuzz.prototype.isMultipleOfThree = function(number) {
   return number % 3 == 0;
 }
