@@ -20,4 +20,8 @@ describe("FizzBuzz", function() {
   it("should return 1 given 1 via common interface", function(){
     expect(fizzBuzz.calculate(1)).toEqual("1");
   })
+
+  it("should return 0 given 0 via common interface", function(){
+    expect(fizzBuzz.calculate(0)).toEqual("0");
+  })
 })
