@@ -13,7 +13,7 @@ FizzBuzz.prototype.calculate = function(number) {
     return 'buzz';
   }
 
-  return number;
+  return number.toString();
 }
 
 FizzBuzz.prototype.calculateFizz = function(number) {
