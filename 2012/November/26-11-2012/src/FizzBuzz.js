@@ -2,6 +2,13 @@ function FizzBuzz(){
 
 }
 
+FizzBuzz.prototype.calculate = function(number){
+  if(number % 3 == 0){
+    return 'fizz';
+  }
+}
+
+
 FizzBuzz.prototype.calculateFizz = function(number){
   if(number % 3 == 0){
     return 'fizz';
