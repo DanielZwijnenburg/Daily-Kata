@@ -17,6 +17,6 @@ describe("FizzBuzz", function() {
   });
 
   it("should not return fizz when given 5", function() {
-    expect(fizzBuzz.calculateFizz(3)).toNotEqual('fizz');
+    expect(fizzBuzz.calculateFizz(5)).toNotEqual('fizz');
   })
 })
