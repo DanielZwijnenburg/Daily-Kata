@@ -8,7 +8,9 @@ FizzBuzz.prototype.calculateFizz = function(number){
 }
 
 FizzBuzz.prototype.calculateBuzz = function(number){
-  return 'buzz';
+  if(number % 5 == 0){
+    return 'buzz';
+  }
 }
 
 FizzBuzz.prototype.calculateFizzBuzz = function(number){
