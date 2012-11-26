@@ -8,3 +8,7 @@ FizzBuzz.prototype.calculateFizz = function(number){
 FizzBuzz.prototype.calculateBuzz = function(number){
   return 'buzz';
 }
+
+FizzBuzz.prototype.calculateFizzBuzz = function(number){
+  return 'fizzbuzz';
+}
