@@ -15,6 +15,6 @@ describe 'FizzBuzz' do
   end
 
   it "should return 'fizzbuzz' when number is dividable by 15" do
-    pending "add tests"
+    fizzbuzz.calculate(15).should == "fizzbuzz"
   end
 end
