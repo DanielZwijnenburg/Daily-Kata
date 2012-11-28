@@ -6,7 +6,7 @@ describe 'PrimeFactors' do
   end
 
   it 'Should factor 2' do
-    PrimeFactors.of(1).should == [2]
+    PrimeFactors.of(2).should == [2]
   end
 
 end
