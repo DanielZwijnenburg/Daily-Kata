@@ -1,12 +1,13 @@
 require_relative 'prime_factors'
 
 describe 'PrimeFactors' do
-  it 'Should factor 1' do
-    PrimeFactors.of(1).should == []
+  [
+    ['1', []],
+    ['2', [2]]
+  ].each do |expression, factors|
+    it "should factor #{expression}" do
+      number = eval expression
+      PrimeFactors.of(number).should == factors
+    end
   end
-
-  it 'Should factor 2' do
-    PrimeFactors.of(2).should == [2]
-  end
-
 end
