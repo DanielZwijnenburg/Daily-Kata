@@ -1,8 +1,8 @@
 class PrimeFactors
-  def self.of(n)
+  def self.of(number)
     factors = []
-    if n > 1
-      factors << n
+    if number > 1
+      factors << number
     end
     factors
   end
