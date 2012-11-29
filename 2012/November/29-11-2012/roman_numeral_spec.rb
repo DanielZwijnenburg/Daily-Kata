@@ -17,4 +17,8 @@ describe 'RomanNumeral' do
   it "converts 4 to IIII" do
     numeral.toRoman(4).should eq "IIII"
   end
+
+  it "converts 5 to V" do
+    numeral.toRoman(5).should eq "V"
+  end
 end
