@@ -20,20 +20,14 @@ class RomanNumeral
   }
 
   def toRoman(number)
-    num = ""
-    number.times do |n|
-      if number <= 4
-        num += "I"
-      elsif number == 5
-        num += "V"
-        break
-      elsif number > 5
-        num += "V"
-        num+= "I"
-        break
+    result = ""
+    NUMERALS.each do |value, symbol|
+      while number >= value
+          result += symbol
+          number -= value
       end
     end
 
-    num
+    result
   end
 end
