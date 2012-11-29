@@ -6,7 +6,12 @@ class RomanNumeral
   def toRoman(number)
     num = ""
     number.times do |n|
-      num += "I"
+      if number <= 4
+        num += "I"
+      else
+        num += "V"
+        break
+      end
     end
 
     num
