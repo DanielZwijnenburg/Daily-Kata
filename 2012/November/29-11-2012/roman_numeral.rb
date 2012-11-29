@@ -4,6 +4,11 @@
 #
 class RomanNumeral
   def toRoman(number)
-    return "I"
+    num = ""
+    number.times do |n|
+      num += "I"
+    end
+
+    num
   end
 end
