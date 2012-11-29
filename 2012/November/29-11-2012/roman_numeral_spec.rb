@@ -25,4 +25,8 @@ describe 'RomanNumeral' do
   it "converts 6 to VI" do
     numeral.toRoman(6).should eq "VI"
   end
+
+  it "converts 140 to CXL" do
+    numeral.toRoman(140).should eq "CXL"
+  end
 end
