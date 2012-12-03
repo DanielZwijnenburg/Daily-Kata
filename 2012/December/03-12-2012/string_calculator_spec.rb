@@ -6,6 +6,10 @@ describe 'StringCalculator' do
     it 'returns 0' do
       StringCalculator.new.add("").should == 0
     end
+
+    it 'returns 1' do
+      StringCalculator.new.add("1").should == 1
+    end
   end
 
   describe "#add with \n delimiter mixed in" do
