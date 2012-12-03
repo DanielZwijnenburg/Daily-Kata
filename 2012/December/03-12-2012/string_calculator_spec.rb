@@ -40,7 +40,9 @@ describe 'StringCalculator' do
   end
 
   describe "#add with numbers bigger than 1000 should be ignored" do
-    pending "implement"
+    it "Ignores 1000 and returns 1 given 1000, 1" do
+      calc.add("1000,1").should == 1 
+    end
   end
 
 end
