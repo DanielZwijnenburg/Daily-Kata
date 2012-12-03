@@ -23,10 +23,16 @@ class StringCalculator
 
   def split_number_string_and_store_result(numberString)
     @number_array = numberString.split(@custom_delimiter).map(&:to_i)
+
+    remove_numbers_greater_than_thousand
   end
 
   def raise_error_if_negatives
     negatives = @number_array.find_all{|n| n < 0}
     raise ArgumentError.new('Negatives not allowed #{negatives.join(" ")}') if  negatives.any?
+  end
+
+  def remove_numbers_greater_than_thousand
+    @number_array.reject!{|n| n >= 1000}
   end
 end
