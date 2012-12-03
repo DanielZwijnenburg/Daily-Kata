@@ -10,6 +10,10 @@ describe 'StringCalculator' do
     it 'returns 1' do
       StringCalculator.new.add("1").should == 1
     end
+
+    it 'returns 3' do
+      StringCalculator.new.add("1,2").should == 3
+    end
   end
 
   describe "#add with \n delimiter mixed in" do
