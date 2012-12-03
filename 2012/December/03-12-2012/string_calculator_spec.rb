@@ -28,7 +28,9 @@ describe 'StringCalculator' do
   end
 
   describe "#add with custom delimiter" do
-    pending "implement"
+    it 'returns 6 given "//;\n1;2;3"' do
+      calc.add("//;\n1;2;3").should == 6
+    end
   end
 
   describe "#add with negative number will raise exception" do
