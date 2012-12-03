@@ -1,18 +1,19 @@
 require_relative 'string_calculator'
 
 describe 'StringCalculator' do
+  let(:calc) {StringCalculator.new}
 
   describe "#add" do
     it 'returns 0' do
-      StringCalculator.new.add("").should == 0
+      calc.add("").should == 0
     end
 
     it 'returns 1' do
-      StringCalculator.new.add("1").should == 1
+      calc.add("1").should == 1
     end
 
     it 'returns 3' do
-      StringCalculator.new.add("1,2").should == 3
+      calc.add("1,2").should == 3
     end
   end
 
