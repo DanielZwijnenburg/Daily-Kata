@@ -15,6 +15,10 @@ describe 'StringCalculator' do
     it 'returns 3' do
       calc.add("1,2").should == 3
     end
+
+    it 'returns 44' do
+      calc.add("20, 10, 5, 5, 4").should == 44
+    end
   end
 
   describe "#add with \n delimiter mixed in" do
