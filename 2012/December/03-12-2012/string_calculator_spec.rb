@@ -22,7 +22,9 @@ describe 'StringCalculator' do
   end
 
   describe "#add with \n delimiter mixed in" do
-    pending "implement"
+    it 'returns 6 given "1\n2,3"' do
+      calc.add("1\n2,3").should == 6
+    end
   end
 
   describe "#add with custom delimiter" do
