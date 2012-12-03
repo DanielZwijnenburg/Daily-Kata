@@ -3,7 +3,9 @@ require_relative 'string_calculator'
 describe 'StringCalculator' do
 
   describe "#add" do
-    pending "implement"
+    it 'returns 0' do
+      StringCalculator.new.add("").should == 0
+    end
   end
 
   describe "#add with \n delimiter mixed in" do
