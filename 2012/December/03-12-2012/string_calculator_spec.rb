@@ -34,7 +34,9 @@ describe 'StringCalculator' do
   end
 
   describe "#add with negative number will raise exception" do
-    pending "implement"
+    it "raises Negatives Not allowed" do
+      expect {calc.add("1,2,3,-100")}.to raise_error(ArgumentError) 
+    end
   end
 
   describe "#add with numbers bigger than 1000 should be ignored" do
