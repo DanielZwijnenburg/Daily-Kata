@@ -1,6 +1,8 @@
 class StringCalculator
   def add(numberString)
     return 0 if numberString.empty?
-    return numberString.to_i
+    numbers = numberString.split(",").map(&:to_i)
+
+    numbers.inject(&:+)
   end
 end
