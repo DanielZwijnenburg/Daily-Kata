@@ -1,9 +1,18 @@
 class Lcd
   def convert(number)
-    return  "   " +
-            "  |" +
-            "   " +
-            "  |" +
-            "   "
+    case number
+      when 1
+        return  "   " +
+                "  |" +
+                "   " +
+                "  |" +
+                "   "
+      when 2
+        return  " - " +
+                "  |" +
+                " - " +
+                "|  " +
+                " - "
+    end
   end
 end
