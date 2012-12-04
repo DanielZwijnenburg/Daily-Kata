@@ -113,6 +113,16 @@ describe "LcdKata" do
           }
     end
 
+    context "should return the LCD representation of 1337" do
+      let(:number) { 1337 }
+      it { 
+            should == "     -   -   - " +
+                      "  |   |   |   |" +
+                      "     -   -     " +
+                      "  |   |   |   |" +
+                      "     -   -     "
+          }
+    end
 
   end
 end
