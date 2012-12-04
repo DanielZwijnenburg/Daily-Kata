@@ -24,5 +24,17 @@ describe "LcdKata" do
                       " - "
           }
     end
+
+    context "should return the LCD representation of 3" do
+      let(:number) { 3 }
+      it { 
+            should == " - " +
+                      "  |" +
+                      " - " +
+                      "  |" +
+                      " - "
+          }
+    end
+
   end
 end
