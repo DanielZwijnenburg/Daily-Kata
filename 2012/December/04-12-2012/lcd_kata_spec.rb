@@ -36,5 +36,83 @@ describe "LcdKata" do
           }
     end
 
+    context "should return the LCD representation of 4" do
+      let(:number) { 4 }
+      it { 
+            should == "   " +
+                      "| |" +
+                      " - " +
+                      "  |" +
+                      "   "
+          }
+    end
+
+    context "should return the LCD representation of 5" do
+      let(:number) { 5 }
+      it { 
+            should == " - " +
+                      "|  " +
+                      " - " +
+                      "  |" +
+                      " - "
+          }
+    end
+
+    context "should return the LCD representation of 6" do
+      let(:number) { 6 }
+      it { 
+            should == " - " +
+                      "|  " +
+                      " - " +
+                      "| |" +
+                      " - "
+          }
+    end
+
+    context "should return the LCD representation of 7" do
+      let(:number) { 7 }
+      it { 
+            should == " - " +
+                      "  |" +
+                      "   " +
+                      "  |" +
+                      "   "
+          }
+    end
+
+    context "should return the LCD representation of 8" do
+      let(:number) { 8 }
+      it { 
+            should == " - " +
+                      "| |" +
+                      " - " +
+                      "| |" +
+                      " - "
+          }
+    end
+
+    context "should return the LCD representation of 9" do
+      let(:number) { 9 }
+      it { 
+            should == " - " +
+                      "| |" +
+                      " - " +
+                      "  |" +
+                      " - "
+          }
+    end
+
+    context "should return the LCD representation of 0" do
+      let(:number) { 0 }
+      it { 
+            should == " - " +
+                      "| |" +
+                      "   " +
+                      "| |" +
+                      " - "
+          }
+    end
+
+
   end
 end
