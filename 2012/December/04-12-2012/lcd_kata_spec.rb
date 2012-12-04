@@ -10,5 +10,13 @@ describe "LcdKata" do
                                     "  |" +
                                     "   "
     end
+
+    it "#convert should return the LCD representation of 2" do
+      Lcd.new.convert(2).should ==  " - " +
+                                    "  |" +
+                                    " - " +
+                                    "|  " +
+                                    " - "
+    end
   end
 end
