@@ -1,6 +1,20 @@
 RomanNumeral = function(){
+  NUMERALS = {
+    V: 5,
+    I: 1
+  }
+
   convert = function(number) {
-    return "I";
+    var result;
+    for (var key in NUMERALS) {
+      if (NUMERALS.hasOwnProperty(key)) {
+        if(NUMERALS[key] == number) {
+          result = key;
+        }
+      }
+    }
+
+    return result;
   }
 
   return{
