@@ -39,4 +39,8 @@ describe("RomanNumeral", function() {
   it('should return the roman numeral for 4', function() {
     expect(romanNumeral.convert(4)).toEqual("IV");
   })
+
+  it('should return the roman numeral for 1337', function() {
+    expect(romanNumeral.convert(1337)).toEqual("MCCCXXXVII");
+  })
 })
