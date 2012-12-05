@@ -6,6 +6,7 @@ RomanNumeral = function(){
 
   convert = function(number) {
     var result;
+
     for (var key in NUMERALS) {
       if (NUMERALS.hasOwnProperty(key)) {
         if(NUMERALS[key] == number) {
