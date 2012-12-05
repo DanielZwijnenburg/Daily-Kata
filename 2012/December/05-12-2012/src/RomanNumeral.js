@@ -20,7 +20,7 @@ RomanNumeral = function(){
 
     for (var key in NUMERALS) {
       if (NUMERALS.hasOwnProperty(key)) {
-        if(number >= NUMERALS[key]) {
+        while(number >= NUMERALS[key]) {
           result += key;
           number -= NUMERALS[key];
         }
