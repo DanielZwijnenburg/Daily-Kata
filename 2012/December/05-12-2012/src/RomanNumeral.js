@@ -10,12 +10,13 @@ RomanNumeral = function(){
   }
 
   convert = function(number) {
-    var result;
+    var result = "";
 
     for (var key in NUMERALS) {
       if (NUMERALS.hasOwnProperty(key)) {
-        if(NUMERALS[key] == number) {
-          result = key;
+        if(number >= NUMERALS[key]) {
+          result += key;
+          number -= NUMERALS[key];
         }
       }
     }
