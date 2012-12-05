@@ -15,4 +15,8 @@ describe("RomanNumeral", function() {
   it('should return the roman numeral for 10', function() {
     expect(romanNumeral.convert(10)).toEqual("X");
   })
+
+  it('should return the roman numeral for 50', function() {
+    expect(romanNumeral.convert(50)).toEqual("L");
+  })
 })
