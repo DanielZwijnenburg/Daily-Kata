@@ -23,4 +23,8 @@ describe("RomanNumeral", function() {
   it('should return the roman numeral for 100', function() {
     expect(romanNumeral.convert(100)).toEqual("C");
   })
+
+  it('should return the roman numeral for 500', function() {
+    expect(romanNumeral.convert(100)).toEqual("D");
+  })
 })
