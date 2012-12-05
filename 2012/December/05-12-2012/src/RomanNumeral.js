@@ -1,5 +1,6 @@
 RomanNumeral = function(){
   NUMERALS = {
+    D: 500,
     C: 100,
     L: 50,
     X: 10,
