@@ -36,4 +36,7 @@ describe("RomanNumeral", function() {
     expect(romanNumeral.convert(55)).toEqual("LV");
   })
 
+  it('should return the roman numeral for 4', function() {
+    expect(romanNumeral.convert(4)).toEqual("IV");
+  })
 })
