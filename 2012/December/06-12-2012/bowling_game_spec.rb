@@ -13,4 +13,8 @@ describe "BowlingKata" do
   it "should return 10 for thrown score" do
     BowlingGame.new.score("54545454545454545454").should eq 90
   end
+
+  it "should return 16 for 5 spare 3" do
+    BowlingGame.new.score("5/3-----------------").should eq 16
+  end
 end
