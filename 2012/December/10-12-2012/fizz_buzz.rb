@@ -1,5 +1,9 @@
 class FizzBuzz
   def calculate(number)
-    return number.to_s
+    if number % 3 == 0
+      return "fizz"
+    else
+      return number.to_s
+    end
   end
 end
