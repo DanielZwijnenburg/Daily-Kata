@@ -14,7 +14,7 @@ describe 'FizzBuzz' do
     fizzbuzz.calculate(5).should == "buzz"
   end
 
-  # it "should return 'fizzbuzz' when number is dividable by 15" do
-  #   fizzbuzz.calculate(15).should == "fizzbuzz"
-  # end
+  it "should return 'fizzbuzz' when number is dividable by 15" do
+    fizzbuzz.calculate(15).should == "fizzbuzz"
+  end
 end
