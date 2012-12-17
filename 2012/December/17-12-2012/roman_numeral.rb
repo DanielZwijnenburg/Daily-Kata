@@ -8,6 +8,8 @@ class RomanNumeral
       "II"
     when 3
       "III"
+    when 4
+      "IV"
     end
   end
 
