@@ -30,4 +30,11 @@ describe 'RomanNumeral' do
     numeral.toRoman(140).should eq "CXL"
   end
 
+  it "converts 2990 to MMCMXC" do
+    numeral.toRoman(2990).should eq "MMCMXC"
+  end
+
+  it "converts 4323 to MMMMCCCXXIII" do
+    numeral.toRoman(4323).should eq "MMMMCCCXXIII"
+  end
 end
