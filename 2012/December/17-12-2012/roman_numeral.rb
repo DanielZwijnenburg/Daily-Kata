@@ -1,16 +1,19 @@
 class RomanNumeral
-
+  attr_accessor :result
+  NUMBERS = {
+    4 => "IV",
+    1 => "I"
+  }
   def toRoman(number)
-    case number
-    when 1
-      "I"
-    when 2
-      "II"
-    when 3
-      "III"
-    when 4
-      "IV"
+    result = ""
+    NUMBERS.each do |value, symbol|
+      while number >= value
+        result += symbol
+        number -= value
+      end
     end
+
+    result
   end
 
 end
