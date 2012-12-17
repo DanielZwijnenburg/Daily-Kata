@@ -1,6 +1,7 @@
 class RomanNumeral
   attr_accessor :result
   NUMBERS = {
+    5 => "V",
     4 => "IV",
     1 => "I"
   }
